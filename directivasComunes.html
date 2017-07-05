@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<title>Directivas </title>
+		<style>
+			.error{
+				color: red;
+				background-color: yellow;
+			}
+			
+			.bold{
+				font-weight: bold;
+			}
+			
+			div{
+				padding: 20 0 20 0;
+			}
+		</style>
+		<script>
+			function incrementar(contador){
+				return contador = contador + 1;
+			}
+		</script
+	</head>
+	
+	<body ng-app>
+		<div>ng-init</div>
+		<span ng-init="x=5;y=100; persona = {nombre:  'Carlos'}">
+			{{x+" "+y}} {{persona.nombre}}
+		</span>
+		<div>ng-if</div>
+		<span ng-if="x==5">X es igual 5</span>
+		<div>ng-click</div>
+		<input 
+			type="button" 
+			value="incrementar" 
+			ng-click="contador = contador + 1" 
+			ng-init="contador=0" />
+			{{contador}}
+		<div>ng-mouseOver</div>
+			<input 
+			type="button" 
+			value="incrementar" 
+			ng-mouseOver="contador2 = contador2 + 1" 
+			ng-init="contador2=0" />
+			{{contador2}}
+		<div>ng-dblclick</div>
+			<input 
+			type="button" 
+			value="incrementar" 
+			ng-dblclick="contador3 = contador3 + 1" 
+			ng-init="contador3=0" />
+			{{contador3}}
+		<div>ng-keypress</div>
+			<input 
+				type="text" 
+				ng-keypress="contador4 = contador4 + 1" 
+				ng-init="contador4=0" />
+			{{contador4}}
+		<div>ng-show ng-hide</div>
+			<input type="checkbox" ng-model="showHide" >
+		<br/>
+		<div>
+			<span ng-show="showHide">
+				Show esta seleccionado
+			</span>
+		</div>
+		<div>
+			<div ng-hide="showHide">
+				Show no esta seleccionado
+			</div>
+		</div>
+		
+		<div ng-init="
+			personas=[{nombre: 'Raul', pais: 'Venezuela'},
+					  {nombre: 'Pedro', pais: 'España'}]">ng-repeat</div>
+					  
+		<span ng-repeat="persona in personas">
+			{{persona.nombre+" "+persona.pais}}
+			<br>
+		</span>
+			
+		<div>ng-class</div>
+		<input type="text" ng-model="estilo1">
+		
+		<p ng-class="estilo1">ng-class text 1 </p>
+		
+		<input type="text" ng-model="estilo2">
+		<input type="text" ng-model="estilo3">
+		<p ng-class="[estilo3, estilo2]">ng-class text 2 </p>
+		
+		<input type="checkbox" ng-model="usarError" >
+		<input type="checkbox" ng-model="usarBold" >
+		
+		<p ng-class="{ 'error':usarError, 'bold': usarBold}">ng-class test 3
+		</p>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	</body>
+</html>

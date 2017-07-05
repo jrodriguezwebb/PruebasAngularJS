@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="enrutamiento">
+	<head>
+		<title>Routing</title>
+		<base href="/AngularJS/" />
+	</head>
+	
+	<body ng-controller="MainController" >
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<ul class="nav navbar-nav navbar-left">
+					<li><a href="/AngularJS">Inicio</a></li>
+					<li><a href="nosotros">Nosotros</a></li>
+					<li><a href="contactenos">Contactenos</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div>
+			<div ng-view></div>
+		</div>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="https://code.angularjs.org/1.6.4/angular-route.min.js"></script>
+		<script src="js/app7.js">
+		</script>
+	</body>
+</html>

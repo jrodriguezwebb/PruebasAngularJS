@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Local Storage</title>
+	</head>
+	
+	<body ng-app='miModulo' >
+		<div 
+			class="container"
+			ng-controller="miController">
+			<div class="jumbotron">
+				<textarea 
+					cols="50" 
+					rows="4"
+					ng-model="texto"
+					>
+				</textarea>
+				<br />
+				<button 
+					class="btn btn-primary"
+					ng-click="grabar()">
+					Grabar
+				</button>
+				<button 
+					class="btn btn-primary"
+					ng-click="cargar()">
+					Cargar
+				</button>
+			</div>
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		
+		<script src="js/ngStorage.min.js"></script>
+
+		<script src="js/app13.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</body>
+</html>

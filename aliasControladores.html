@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Alias controladores</title>
+	</head>
+	
+	<body ng-app="miModulo">
+		<div ng-controller="PadreController as padre">
+			{{ padre.nombre }}
+			<div ng-controller="HijoController as hijo">
+				{{ hijo.nombre + ',' + padre.nombre + ',' }}
+				<!-- 
+					se puede acceder a las propiedade del controlador padre cuando no hay 
+					un alias de la siguiente forma ====>  $parent.nombre -->
+			</div>
+		</div>		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="js/app2.js">
+		</script>
+	</body>
+</html>

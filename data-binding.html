@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>Data-binding </title>
+	</head>
+	
+	<body ng-app>
+		{{"Hola mundo"}}
+		<input type="text" ng-model="miNombre" >
+		<p ng-init="miNombre='Carlos'">Hola, {{miNombre}}</p>
+		<input type="button" value="Luis" ng-click="miNombre='Luis'"  />
+		<div>
+			<p>Cambia imagen de fb</p>
+			<input type="text" ng-model="fbID" />
+			<p>
+				<img src="https://graph.facebook.com/{{fbID}}/picture?type=normal" />
+			</p>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	</body>
+</html>

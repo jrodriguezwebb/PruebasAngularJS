@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scope, Controladores, Modulos </title>
+</head>
+
+<body ng-app="contadorModule">
+	<div ng-controller="MainController">
+		<button ng-click="sumarUno()">Sumar uno</button>			
+		<button ng-click="restarUno()">Restar uno</button>
+		<p>Contador: {{contador}}</p>
+	</div>		
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script>
+		angular.module('contadorModule',[])
+			.controller('MainController', function($scope){
+				$scope.contador = 0;
+				
+				$scope.sumarUno = function (){
+					$scope.contador += 1;
+				}
+				
+				$scope.restarUno = function (){
+					$scope.contador -= 1;
+				}
+		})
+	</script>
+</body>
+</html>

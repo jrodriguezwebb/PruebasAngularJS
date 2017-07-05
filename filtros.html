@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="filtros">
+	<head>
+		<title>Filtros</title>
+	</head>
+	
+	<body>
+		<div ng-controller="FiltrosController">
+			{{ "Habia una vez" | suspensivos }}<br>
+			{{ 
+				personas | filter: {'nacionalidad':'Mexicano'} 
+			}}<br>
+			{{ ['lunes','martes','miercoles','jueves','viernes','sabado','domingo'] | filter: 'e' }}<br>
+			{{ hoy | date:'yyyy-MM-dd' }}<br>
+			{{ 'Buenos Dias' | lowercase | limitTo:6 }}<br>
+			{{ 200 | currency }}<br>
+			{{ "Que Viva Mexico" | uppercase }}<br>
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="js/app5.js">
+		</script>
+	</body>
+</html>

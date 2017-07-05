@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Servicios - $http</title>
+	</head>
+	
+	<body ng-app='UsuariosModule' ng-controller="UsuariosController">
+		<div class="container"> 			
+			<label for="">Buscar</label> 
+			<!--<input type="text" ng-model="filtro.name" /> 
+			si se quiere filtrar por un campo en especifico --> 
+			<input type="text" ng-model="filtro" />      
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th ng-click="orden = 'name'">Name</th>
+						<th ng-click="orden = 'username'">User Name</th>
+						<th ng-click="orden = 'email'">Email</th>
+						<th ng-click="orden = 'address.street'">Direccion</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="usuario in usuarios | filter: filtro | orderBy: orden">
+						<td>{{usuario.name}}</td>
+						<td>{{usuario.username}}</td>
+						<td>{{usuario.email}}</td>
+						<td>{{usuario.address.street}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="js/app8.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</body>
+</html>
